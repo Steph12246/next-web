@@ -31,6 +31,7 @@ iframe {
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+  box-sizing: border-box;
 }
 
 header {
@@ -291,24 +292,27 @@ h5 {
 
 .email {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 input[type="email"]{
   width: 750px;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   height: 40px;
   border: none;
   margin-right: 0;
   position: relative;
+  padding-left: 15px
 }
 
 input[type="submit"]{
-  height: 40px;
+  height: 42px;
   border: none;
   margin-left: 0;
   border-radius: 5px;
-  position: absolute;
-  right: 0;
+  position: relative;
+  border-radius: 0 5px 5px 0;
 }
 
 .icon {
@@ -520,5 +524,159 @@ footer ul {
 }
 
 @media (max-width: 767px) {
+ body section {
+   margin-top: 10px;
+ }
 
+ h2 {
+   text-align: center;
+   font-size: 28px;
+ }
+
+ .head {
+   padding-top: 50px;
+   margin: auto;
+ }
+
+ h1 {
+   margin-top: 0;
+   font-size: 20px
+ }
+
+ .heartOfTech {
+   grid-template-areas: "a a a b"
+                        "a a a b"
+                        "d d d d";
+  height: 800px;
+  padding: 0;
+  margin-bottom: 50px;
+ }
+
+ .heartOfTech .c, .watch .e , .heartOfTech .e, .f{
+   display: none;
+ }
+
+ .articles div {
+   display: flex;
+   align-items: center;
+ }
+
+ .stories {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   padding-right: 20px;
+   padding-left: 20px;
+ }
+
+ .storyCard {
+   display: grid;
+   grid-template-columns: 30% 1fr;
+ }
+
+ .storyCard img {
+   grid-row: span 3;
+   border-radius: 50%;
+   height: 170px;
+   width: 170px;
+   object-fit: cover;
+ }
+
+ .stories button {
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 50px;
+ }
+
+ .explore {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+ }
+
+ .explore h2 {
+   display: inline-block;
+   width: 100%;
+ }
+
+ .explore div {
+   width: 25%;
+ }
+
+ .explore div:nth-child(4), .explore div:nth-child(5){
+   display: none;
+ }
+
+ .subscribe h3 {
+   font-size: 1.5em;
+ }
+
+ .subscribe {
+   padding: 50px 10px;
+ }
+
+ .email {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+ }
+
+ .watch {
+   padding: 25px 0 50px;
+   height: 780px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto 70% 1fr;
+   grid-template-areas: "h h h"
+                        "a a a"
+                        "b c d";
+
+ }
+
+ .work {
+   display: inline-flex;
+   align-items: center;
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: space-around;
+   padding: 50px 0;
+ }
+
+ .workCard {
+   flex-direction: column;
+   margin: 0;
+   width: 45%;
+ }
+
+ .work button {
+   margin: 20px auto 40px;
+ }
+
+
+ .sponsors .logo {
+   width: 45%;
+ }
+
+ footer {
+   grid-template-columns: 50% 1fr;
+ }
+
+ .footHead, .footSocials, .copyright {
+   grid-column: span 2;
+ }
+
+.footHead, .footSocials, .footMore {
+  margin-left: 20px;
+}
+
+.footSocials ul {
+  margin-top: 15px;
+  justify-content: space-between;
+}
+ .footMore {
+   grid-column: 1;
+ }
+
+ .footAbout {
+   grid-column: 2;
+ }
 }
