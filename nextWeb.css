@@ -577,9 +577,10 @@ footer ul {
  .storyCard img {
    grid-row: span 3;
    border-radius: 50%;
-   height: 170px;
-   width: 170px;
+   height: 5em;
+   width: 5em;
    object-fit: cover;
+   justify-self: center;
  }
 
  .stories button {
@@ -600,7 +601,8 @@ footer ul {
  }
 
  .explore div {
-   width: 25%;
+   width: 28%;
+   padding: 0;
  }
 
  .explore div:nth-child(4), .explore div:nth-child(5){
